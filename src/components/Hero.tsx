@@ -7,7 +7,7 @@ const Hero = () => {
         </p>
 
         <h1 className="max-w-3xl font-display text-4xl leading-tight font-bold sm:text-5xl md:text-6xl">
-          Hej, jag heter Oscar och jag bygger webben med React.
+          Hej, jag heter Oscar och jag bygger för webben.
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg text-zinc-400">
