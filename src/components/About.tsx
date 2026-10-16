@@ -22,7 +22,11 @@ const About = () => {
             i Figma och göra den till ett gränssnitt som fungerar lika bra i
             mobilen som på datorn.
           </p>
-          <p>Exempel text jag inte kommit på än.</p>
+          <p>
+            I mina projekt går jag från skiss i Figma till responsiva gränssnitt
+            i React. Jag lär mig genom att bygga, testa och förbättra, med extra
+            fokus på tillgänglighet, tydlig kod och en bra användarupplevelse.
+          </p>
         </div>
 
         <div>

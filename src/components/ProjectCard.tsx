@@ -19,6 +19,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       </div>
 
       <div className="flex flex-1 flex-col p-6">
+        <p className="mb-1 text-xs font-medium tracking-wide text-zinc-400 uppercase">
+          {project.category}
+        </p>
         <h3 className="font-display text-xl font-semibold">{project.title}</h3>
         <p className="mt-2 flex-1 text-sm text-zinc-400">
           {project.description}

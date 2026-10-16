@@ -4,8 +4,9 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
-const App = () => {
+function App() {
   return (
     <MotionConfig reducedMotion="user">
       <Header />
@@ -13,10 +14,11 @@ const App = () => {
         <Hero />
         <About />
         <Projects />
+        <Contact />
       </main>
       <Footer />
     </MotionConfig>
   );
-};
+}
 
 export default App;
