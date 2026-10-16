@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import { projects } from "../data/projects";
 import type { Tag } from "../types";
 import ProjectCard from "./ProjectCard";
@@ -46,12 +47,21 @@ const Projects = () => {
         Visar {filteredProjects.length} av {projects.length} projekt
       </p>
 
-      <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {filteredProjects.map((project) => (
-          <li key={project.id}>
-            <ProjectCard project={project} />
-          </li>
-        ))}
+      <ul className="relative grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <AnimatePresence mode="popLayout">
+          {filteredProjects.map((project) => (
+            <motion.li
+              key={project.id}
+              layout
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ProjectCard project={project} />
+            </motion.li>
+          ))}
+        </AnimatePresence>
       </ul>
     </Section>
   );
