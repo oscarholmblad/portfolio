@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Portfolions visuella profil – samma typsnitt och accentfärg som i Figma-stilguiden */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --color-accent: #34d399;
+  --color-accent-strong: #10b981;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
