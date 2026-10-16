@@ -1,11 +1,18 @@
+import About from "./components/About";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+
 const App = () => {
   return (
-    <main className="p-8">
-      <h1 className="font-display text-5xl font-bold text-accent">Portfolio</h1>
-      <p className="mt-4 text-zinc-400">
-        Tailwind fungerar om rubriken är grön.
-      </p>
-    </main>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <About />
+      </main>
+      <Footer />
+    </>
   );
 };
 
