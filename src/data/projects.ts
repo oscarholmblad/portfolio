@@ -69,5 +69,6 @@ export const projects: Project[] = [
     imageAlt: "Startsidan på portfolion med mörk bakgrund och grön accentfärg",
     tags: ["React", "TypeScript", "Tailwind CSS"],
     repoUrl: "https://github.com/oscarholmblad/portfolio",
+    liveUrl: "https://portfolio-tau-lake-8m4vedngel.vercel.app/",
   },
 ];
