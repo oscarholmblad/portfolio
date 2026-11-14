@@ -1,4 +1,9 @@
 import type { Project } from "../types";
+// Lägg till ett nytt projekt genom att kopiera ett objekt nedan och ändra värdena.
+// - id måste vara unikt
+// - lägg bilden i public/images/projects/ (1200 px bred jpg)
+// - nya tekniker i tags måste först läggas till i typen Tag i src/types.ts
+// - repoUrl och liveUrl är valfria, men minst en av dem bör finnas med
 
 export const projects: Project[] = [
   {
@@ -7,7 +12,7 @@ export const projects: Project[] = [
     title: "Budget Tracker",
     description:
       "Håll koll på inkomster och utgifter. Ett skolprojekt som jag vidareutvecklat på egen hand mot en installerbar app (PWA).",
-    image: "/images/Rectangle 1.png",
+    image: "/images/projects/budget-tracker.jpg",
     imageAlt:
       "Budget Tracker med saldo och formulär för inkomster och utgifter",
     tags: ["TypeScript", "CSS", "PWA"],
@@ -20,7 +25,7 @@ export const projects: Project[] = [
     title: "Gottfrid's Fik",
     description:
       "Webbshop i en sida för ett fik, med filtrering, sortering, varukorg och beställningsformulär med validering. Priset räknas om efter regler som måndagsrabatt, helgpåslag och mängdrabatt.",
-    image: "/images/Rectangle 2.png",
+    image: "/images/projects/gottfrids-fik.jpg",
     imageAlt: "Gottfrid's Fik med produktfilter, produktkort och varukorg",
     tags: ["HTML", "JavaScript", "SCSS"],
     liveUrl: "https://unique-crumble-3d6a51.netlify.app",
@@ -31,7 +36,7 @@ export const projects: Project[] = [
     title: "Book API",
     description:
       "REST-API för böcker med inloggning, adminsida och recensioner, byggt i grupp om tre. Jag ansvarade för böckerna: MongoDB-databasen, CRUD-endpoints och klientens bok- och adminsidor.",
-    image: "/images/Rectangle 3.png",
+    image: "/images/projects/book-api.jpg",
     imageAlt: "Boklistan i Book API-klienten med bokomslag",
     tags: ["TypeScript", "Express", "MongoDB"],
     repoUrl: "https://github.com/RasmusFranssonHub/api-book-group",
@@ -42,7 +47,7 @@ export const projects: Project[] = [
     title: "IKEA Escape Room",
     description:
       "Escape room där spelaren har gått vilse på IKEA och måste lösa pussel genom varuhusets avdelningar. Byggt i grupp om fyra; jag gjorde sista rummet, Kassan.",
-    image: "/images/Rectangle 4.png",
+    image: "/images/projects/ikea-escape-room.jpg",
     imageAlt: "Startsidan till IKEA-spelet",
     tags: ["HTML", "TypeScript", "SCSS"],
     liveUrl:
@@ -54,7 +59,7 @@ export const projects: Project[] = [
     title: "E-shop API",
     description:
       "REST-API för en e-shops produktkatalog med CRUD för produkter och kategorier, sökning och sortering. Normaliserad MySQL-databas där en produkt kan tillhöra flera kategorier.",
-    image: "/images/Rectangle 5.png",
+    image: "/images/projects/eshop-api.jpg",
     imageAlt: "ER-diagram över produkter, kategorier och kopplingstabellen",
     tags: ["TypeScript", "Express", "MySQL"],
     repoUrl: "https://github.com/oscarholmblad/eshop-api",
@@ -64,11 +69,11 @@ export const projects: Project[] = [
     category: "Webbplats",
     title: "Portfolio",
     description:
-      "Den här sidan. En React-SPA med filtrerbara projekt, animerad mobilmeny och ett validerat kontaktformulär.",
-    image: "/images/Rectangle 6.png",
+      "Den här sidan. En React-SPA med filtrerbara projekt, animerad mobilmeny och ett kontaktformulär som skickar riktiga mejl.",
+    image: "/images/projects/portfolio.jpg",
     imageAlt: "Startsidan på portfolion med mörk bakgrund och grön accentfärg",
     tags: ["React", "TypeScript", "Tailwind CSS"],
     repoUrl: "https://github.com/oscarholmblad/portfolio",
-    liveUrl: "https://portfolio-tau-lake-8m4vedngel.vercel.app/",
+    liveUrl: "https://oscarholmblad.vercel.app/",
   },
 ];
