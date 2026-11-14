@@ -27,19 +27,28 @@ const About = () => {
   return (
     <Section id="om-mig" title="Om mig">
       <div className="grid gap-10 md:grid-cols-2">
-        <div className="space-y-4 text-zinc-300">
-          <p>
-            Jag är frontendutvecklare under utbildning på Medieinstitutet och
-            bor i Karlstad. Under utbildningen har jag byggt allt från en
-            webbshop och ett spel i JavaScript och TypeScript till API:er i
-            Express och appar i React.
-          </p>
-          <p>
-            Det jag gillar mest är vägen från idé till färdigt gränssnitt: att
-            skissa i Figma, bygga komponenter och se till att sidan fungerar för
-            alla, oavsett skärm. Just nu söker jag LIA helst i Karlstadsområdet
-            men jag är också öppen för distans.
-          </p>
+        <div>
+          <img
+            src="/images/oscar.jpg"
+            alt="Oscar Holmblad"
+            width={160}
+            height={160}
+            className="mb-8 size-32 rounded-full border-2 border-zinc-800 object-cover sm:size-40"
+          />
+          <div className="space-y-4 text-zinc-300">
+            <p>
+              Jag är frontendutvecklare under utbildning på Medieinstitutet och
+              bor i Karlstad. Under utbildningen har jag byggt allt från en
+              webbshop och ett spel i JavaScript och TypeScript till API:er i
+              Express och appar i React.
+            </p>
+            <p>
+              Det jag gillar mest är vägen från idé till färdigt gränssnitt: att
+              skissa i Figma, bygga komponenter och se till att sidan fungerar
+              för alla, oavsett skärm. Just nu söker jag LIA helst i
+              Karlstadsområdet men jag är också öppen för distans.
+            </p>
+          </div>
         </div>
 
         <div>
