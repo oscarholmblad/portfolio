@@ -14,7 +14,7 @@ const TagFilter = ({
   onClear,
 }: TagFilterProps) => {
   return (
-    <div className="mb-8 flex flex-wrap items-center gap-2">
+    <div className="mb-6 flex flex-wrap items-center gap-2">
       {tags.map((tag) => {
         const isSelected = selectedTags.includes(tag);
 
@@ -24,10 +24,10 @@ const TagFilter = ({
             type="button"
             onClick={() => onToggleTag(tag)}
             aria-pressed={isSelected}
-            className={`cursor-pointer rounded-full border px-4 py-2 text-sm transition-colors ${
+            className={`cursor-pointer rounded-full border px-4 py-1.5 text-sm transition-colors ${
               isSelected
-                ? "border-accent bg-accent text-zinc-950"
-                : "border-zinc-700 text-zinc-300 hover:border-accent hover:text-accent"
+                ? "border-birch bg-birch text-forest"
+                : "border-birch/25 text-lichen hover:border-birch/60 hover:text-birch"
             }`}
           >
             {tag}
@@ -39,7 +39,7 @@ const TagFilter = ({
         type="button"
         onClick={onClear}
         disabled={selectedTags.length === 0}
-        className="cursor-pointer px-4 py-2 text-sm text-zinc-400 transition-colors hover:text-zinc-100 disabled:cursor-not-allowed disabled:opacity-40"
+        className="cursor-pointer px-3 py-1.5 text-sm text-lichen underline underline-offset-4 transition-colors hover:text-birch disabled:cursor-not-allowed disabled:no-underline disabled:opacity-40"
       >
         Rensa filter
       </button>

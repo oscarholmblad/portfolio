@@ -43,20 +43,21 @@ const Projects = () => {
         onClear={clearTags}
       />
 
-      <p className="mb-6 text-sm text-zinc-400" aria-live="polite">
+      <p className="mb-8 text-sm text-lichen" aria-live="polite">
         Visar {filteredProjects.length} av {projects.length} projekt
       </p>
 
-      <ul className="relative grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="relative border-t border-birch/15">
         <AnimatePresence mode="popLayout">
           {filteredProjects.map((project) => (
             <motion.li
               key={project.id}
               layout
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
+              className="border-b border-birch/15"
             >
               <ProjectCard project={project} />
             </motion.li>
