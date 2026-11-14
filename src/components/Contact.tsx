@@ -1,63 +1,45 @@
-// Kontaktformuläret är avstängt tills det kopplas till en mejltjänst
-// import ContactForm from "./ContactForm";
 import Section from "./Section";
 
-const contactDetails = [
-  {
-    label: "E-post",
-    text: "oscarholmblad@outlook.com",
-    href: "mailto:oscarholmblad@outlook.com",
-  },
-  {
-    label: "GitHub",
-    text: "github.com/oscarholmblad",
-    href: "https://github.com/oscarholmblad",
-  },
+const email = "oscarholmblad@outlook.com";
+
+const links = [
+  { label: "GitHub", href: "https://github.com/oscarholmblad" },
   {
     label: "LinkedIn",
-    text: "linkedin.com/in/oscar-holmblad-aa3382393",
     href: "https://www.linkedin.com/in/oscar-holmblad-aa3382393",
   },
-  {
-    label: "CV",
-    text: "Öppna som PDF",
-    href: "/cv/oscar-holmblad-cv.pdf",
-  },
+  { label: "CV (PDF)", href: "/cv/oscar-holmblad-cv.pdf" },
 ];
 
 const Contact = () => {
   return (
-    <Section id="kontakt" title="Kontakt">
-      <div className="grid gap-12 lg:grid-cols-[2fr_3fr]">
-        <div>
-          <p className="text-zinc-300">
-            Söker ni en LIA-praktikant, eller vill du bara säga hej? Hör gärna
-            av dig via mejl eller LinkedIn.
-          </p>
+    <Section id="kontakt" title="Kontakt" tinted>
+      <p className="max-w-xl text-lg text-lichen">
+        Söker ni en LIA-praktikant, eller vill du bara säga hej? Hör gärna av
+        dig via mejl eller LinkedIn.
+      </p>
 
-          <ul className="mt-8 space-y-4">
-            {contactDetails.map((detail) => (
-              <li key={detail.label}>
-                <span className="block text-sm text-zinc-500">
-                  {detail.label}
-                </span>
-                <a
-                  href={detail.href}
-                  target={
-                    detail.href.startsWith("mailto:") ? undefined : "_blank"
-                  }
-                  rel="noreferrer"
-                  className="font-medium transition-colors hover:text-accent"
-                >
-                  {detail.text}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <a
+        href={`mailto:${email}`}
+        className="mt-10 inline-block font-display text-2xl font-light break-words underline decoration-gold decoration-2 underline-offset-8 transition-colors hover:text-gold sm:text-4xl md:text-5xl"
+      >
+        {email}
+      </a>
 
-        {/* <ContactForm /> */}
-      </div>
+      <ul className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
+        {links.map((link) => (
+          <li key={link.label}>
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold underline underline-offset-4 transition-colors hover:text-gold"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
     </Section>
   );
 };

@@ -71,7 +71,8 @@ export const projects: Project[] = [
     description:
       "Den här sidan. En React-SPA med filtrerbara projekt, animerad mobilmeny och CV att ladda ner.",
     image: "/images/projects/portfolio.jpg",
-    imageAlt: "Startsidan på portfolion med mörk bakgrund och grön accentfärg",
+    imageAlt:
+      "Startsidan på portfolion med mörkgrön bakgrund och en bild från skogen",
     tags: ["React", "TypeScript", "Tailwind CSS"],
     repoUrl: "https://github.com/oscarholmblad/portfolio",
     liveUrl: "https://oscarholmblad.vercel.app/",
