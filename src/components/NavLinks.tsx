@@ -22,8 +22,8 @@ const NavLinks = ({ variant, onLinkClick }: NavLinksProps) => {
             onClick={onLinkClick}
             className={
               isDesktop
-                ? "text-sm text-zinc-300 transition-colors hover:text-accent"
-                : "block rounded-lg px-3 py-3 text-lg text-zinc-200 transition-colors hover:bg-zinc-900 hover:text-accent"
+                ? "text-sm text-lichen transition-colors hover:text-birch"
+                : "block rounded-md px-3 py-3 text-lg transition-colors hover:bg-forest-light hover:text-gold"
             }
           >
             {link.label}
