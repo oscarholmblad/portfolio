@@ -23,10 +23,11 @@ const Hero = () => {
             Se mina projekt
           </a>
           <a
-            href="#kontakt"
+            href="/cv/oscar-holmblad-cv.pdf"
+            download
             className="rounded-full border border-zinc-700 px-6 py-3 text-center font-semibold transition-colors hover:border-accent hover:text-accent"
           >
-            Kontakta mig
+            Ladda ner CV
           </a>
         </div>
       </div>

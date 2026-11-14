@@ -17,6 +17,11 @@ const contactDetails = [
     text: "linkedin.com/in/oscar-holmblad-aa3382393",
     href: "https://www.linkedin.com/in/oscar-holmblad-aa3382393",
   },
+  {
+    label: "CV",
+    text: "Öppna som PDF",
+    href: "/cv/oscar-holmblad-cv.pdf",
+  },
 ];
 
 const Contact = () => {
