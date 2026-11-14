@@ -25,55 +25,36 @@ const skillGroups = [
 
 const About = () => {
   return (
-    <Section id="om-mig" title="Om mig">
-      <div className="grid gap-10 md:grid-cols-2">
-        <div>
-          <img
-            src="/images/oscar.jpg"
-            alt="Oscar Holmblad"
-            width={160}
-            height={160}
-            className="mb-8 size-32 rounded-full border-2 border-zinc-800 object-cover sm:size-40"
-          />
-          <div className="space-y-4 text-zinc-300">
-            <p>
-              Jag är frontendutvecklare under utbildning på Medieinstitutet och
-              bor i Karlstad. Under utbildningen har jag byggt allt från en
-              webbshop och ett spel i JavaScript och TypeScript till API:er i
-              Express och appar i React.
-            </p>
-            <p>
-              Det jag gillar mest är vägen från idé till färdigt gränssnitt: att
-              skissa i Figma, bygga komponenter och se till att sidan fungerar
-              för alla, oavsett skärm. Just nu söker jag LIA helst i
-              Karlstadsområdet men jag är också öppen för distans.
-            </p>
-          </div>
+    <Section id="om-mig" title="Om mig" tinted>
+      <div className="grid gap-12 md:grid-cols-2 md:gap-16">
+        <div className="space-y-5 text-lg text-lichen">
+          <p>
+            Jag är frontendutvecklare under utbildning på Medieinstitutet och
+            bor i Karlstad. Under utbildningen har jag byggt allt från en
+            webbshop och ett spel i JavaScript och TypeScript till API:er i
+            Express och appar i React.
+          </p>
+          <p>
+            Det jag gillar mest är vägen från idé till färdigt gränssnitt: att
+            skissa i Figma, bygga komponenter och se till att sidan fungerar för
+            alla, oavsett skärm. Just nu söker jag LIA helst i Karlstadsområdet
+            men jag är också öppen för distans.
+          </p>
         </div>
 
         <div>
-          <h3 className="mb-4 font-display text-xl font-semibold">
-            Tekniker och verktyg
-          </h3>
-          <div className="space-y-5">
+          <h3 className="font-display text-2xl">Tekniker och verktyg</h3>
+          <dl className="mt-6 border-t border-birch/15">
             {skillGroups.map((group) => (
-              <div key={group.title}>
-                <h4 className="mb-2 text-xs font-medium tracking-wide text-zinc-400 uppercase">
-                  {group.title}
-                </h4>
-                <ul className="flex flex-wrap gap-2">
-                  {group.skills.map((skill) => (
-                    <li
-                      key={skill}
-                      className="rounded-full border border-zinc-800 bg-zinc-900 px-4 py-2 text-sm"
-                    >
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
+              <div
+                key={group.title}
+                className="grid gap-1 border-b border-birch/15 py-4 sm:grid-cols-[7rem_1fr] sm:gap-6"
+              >
+                <dt className="font-medium text-gold">{group.title}</dt>
+                <dd className="text-lichen">{group.skills.join(", ")}</dd>
               </div>
             ))}
-          </div>
+          </dl>
         </div>
       </div>
     </Section>
