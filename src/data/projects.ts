@@ -1,10 +1,10 @@
 import type { Project } from "../types";
+
 // Lägg till ett nytt projekt genom att kopiera ett objekt nedan och ändra värdena.
 // - id måste vara unikt
 // - lägg bilden i public/images/projects/ (1200 px bred jpg)
 // - nya tekniker i tags måste först läggas till i typen Tag i src/types.ts
 // - repoUrl och liveUrl är valfria, men minst en av dem bör finnas med
-
 export const projects: Project[] = [
   {
     id: 1,
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     category: "Webbplats",
     title: "Portfolio",
     description:
-      "Den här sidan. En React-SPA med filtrerbara projekt, animerad mobilmeny och ett kontaktformulär som skickar riktiga mejl.",
+      "Den här sidan. En React-SPA med filtrerbara projekt, animerad mobilmeny och CV att ladda ner.",
     image: "/images/projects/portfolio.jpg",
     imageAlt: "Startsidan på portfolion med mörk bakgrund och grön accentfärg",
     tags: ["React", "TypeScript", "Tailwind CSS"],

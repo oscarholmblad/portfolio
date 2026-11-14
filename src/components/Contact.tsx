@@ -1,4 +1,5 @@
-import ContactForm from "./ContactForm";
+// Kontaktformuläret är avstängt tills det kopplas till en mejltjänst
+// import ContactForm from "./ContactForm";
 import Section from "./Section";
 
 const contactDetails = [
@@ -30,8 +31,8 @@ const Contact = () => {
       <div className="grid gap-12 lg:grid-cols-[2fr_3fr]">
         <div>
           <p className="text-zinc-300">
-            Söker ni en LIA-praktikant, eller vill du bara säga hej? Skicka ett
-            meddelande via formuläret eller hör av dig direkt.
+            Söker ni en LIA-praktikant, eller vill du bara säga hej? Hör gärna
+            av dig via mejl eller LinkedIn.
           </p>
 
           <ul className="mt-8 space-y-4">
@@ -55,7 +56,7 @@ const Contact = () => {
           </ul>
         </div>
 
-        <ContactForm />
+        {/* <ContactForm /> */}
       </div>
     </Section>
   );
