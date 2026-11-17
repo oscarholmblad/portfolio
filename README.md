@@ -18,16 +18,29 @@ Detta är min personliga portfolio. Här visar jag vem jag är, vad jag har bygg
 - Projektkort som renderas från en egen datafil (`src/data/projects.ts`)
 - Filtrering på teknik där man kan välja flera taggar samtidigt
 - CV att ladda ner som PDF
-- Kontaktuppgifter med e-post, GitHub och LinkedIn
+- LIA-perioder i hero och utbildning och erfarenhet i Om mig, från egna datafiler
+- Menyn markerar den sektion man är i medan man scrollar
+- Kontaktuppgifter med e-post, GitHub och LinkedIn, och en knapp som kopierar mejladressen
+- Granar mellan sektionerna (och en älg någonstans i skogen)
+- Hela sidan finns på svenska och engelska. Språket byts med knappen i headern och sparas till nästa besök, och med `?lang=en` i adressen öppnas den engelska versionen direkt
+- CV-knapp i headern och projektbilder i en ram som liknar ett webbläsarfönster
+- Typsnitten ligger i projektet (`public/fonts`), så inget hämtas från Google
+- Egen ikon om sidan sparas på hemskärmen på en mobil
+- Egen delningsbild som visas när länken delas på t.ex. LinkedIn
 - Animerad mobilmeny och layout-animationer när projekten filtreras
 - Responsiv från mobil (360 px) upp till desktop
 
 ## Tillgänglighet
 
 - Semantiska element: `header`, `nav`, `main`, `section`, `article`, `footer`
+- En länk som hoppar förbi menyn till innehållet syns när man tabbar in på sidan
+- `lang` på `html` följer det valda språket, så att skärmläsare läser upp texten med rätt uttal
 - Filterknapparna har `aria-pressed` så att det framgår vilka som är valda
 - Menyknappen har `aria-expanded` och `aria-controls`
+- Den aktiva menylänken har `aria-current`
 - Räknaren läses upp med `aria-live` när filtret ändras
+- Bekräftelsen när mejladressen kopierats läses upp med `role="status"`
+- Granarna och älgen är bara dekoration och döljs för skärmläsare med `aria-hidden`
 - Rörelse- och layoutanimationer stängs av om man har valt reducerad rörelse i systemet
 
 ## Kör projektet lokalt
@@ -54,8 +67,15 @@ Sidan körs på `http://localhost:5173`.
 
 ## Lägga till ett projekt
 
-1. Lägg en skärmdump i `public/images/projects/` (jpg, 1200 px bred).
-2. Lägg till ett nytt objekt i `src/data/projects.ts` med ett unikt `id`.
+1. Lägg en skärmdump i `public/images/projects/` (jpg, 1200 × 750 px).
+2. Lägg till ett nytt objekt i `src/data/projects.ts` med ett unikt `id`. Kategori, beskrivning och alt-text skrivs på både svenska (`sv`) och engelska (`en`).
 3. Använder projektet en ny teknik, lägg först till den i typen `Tag` i `src/types.ts`.
 
 Filterknapparna räknas fram från projektdatan, så nya taggar dyker upp i filtret av sig själva.
+
+## Uppdatera CV-uppgifter
+
+- Utbildning och erfarenhet ligger i `src/data/cv.ts`, på svenska och engelska.
+- Alla andra texter på sidan ligger i `src/i18n/texts.ts`.
+- LIA-perioderna ligger överst i `src/components/Hero.tsx`.
+- CV:t som laddas ner ligger i `public/cv/oscar-holmblad-cv.pdf`.

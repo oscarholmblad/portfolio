@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { projects } from "../data/projects";
+import { useLanguage } from "../i18n/languageContext";
 import type { Tag } from "../types";
 import ProjectCard from "./ProjectCard";
 import Section from "./Section";
@@ -12,6 +13,7 @@ const allTags: Tag[] = [
 
 const Projects = () => {
   const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
+  const { t } = useLanguage();
 
   const toggleTag = (tag: Tag) => {
     if (selectedTags.includes(tag)) {
@@ -35,7 +37,7 @@ const Projects = () => {
         );
 
   return (
-    <Section id="projekt" title="Projekt">
+    <Section id="projekt" title={t.projects.title}>
       <TagFilter
         tags={allTags}
         selectedTags={selectedTags}
@@ -44,7 +46,7 @@ const Projects = () => {
       />
 
       <p className="mb-8 text-sm text-lichen" aria-live="polite">
-        Visar {filteredProjects.length} av {projects.length} projekt
+        {t.projects.showing(filteredProjects.length, projects.length)}
       </p>
 
       <ul className="relative border-t border-birch/15">

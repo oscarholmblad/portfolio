@@ -1,5 +1,39 @@
 @import "tailwindcss";
 
+/* Typsnitten ligger i public/fonts, så att inget hämtas från Google.
+   Licenserna (SIL Open Font License) ligger i samma mapp. */
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/fraunces-latin-opsz-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/instrument-sans-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/instrument-sans-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/instrument-sans-latin-600-normal.woff2") format("woff2");
+}
+
 /* Tallskog: mörkgrön skog, björkvit text och guld som accent */
 @theme {
   --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
@@ -10,10 +44,40 @@
   --color-lichen: #a9b9a4;
   --color-gold: #e8b44a;
   --color-gold-light: #f2c873;
+
+  /* Största bredden på innehållet, används som max-w-page */
+  --container-page: 100rem;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Fint brus över hela sidan, som ger de gröna ytorna lite struktur */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Granarna används som mask, så samma bild kan få vilken bakgrundsfärg som helst */
+.tradgrans {
+  mask-image: url("/images/tradgrans.svg");
+  mask-size: auto 100%;
+  mask-repeat: repeat-x;
+  mask-position: bottom;
+}
+
+/* Älgen som gömmer sig bland granarna längst ner */
+.alg {
+  mask-image: url("/images/alg.svg");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: bottom;
 }
 
 ::selection {

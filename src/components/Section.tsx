@@ -14,7 +14,7 @@ const Section = ({ id, title, children, tinted = false }: SectionProps) => {
       id={id}
       className={`scroll-mt-16 ${tinted ? "bg-forest-light" : ""}`}
     >
-      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
+      <div className="mx-auto max-w-page px-4 py-20 sm:px-6 md:py-28 lg:px-12">
         <h2 className="mb-12 font-display text-4xl font-light md:text-6xl">
           {title}
         </h2>
